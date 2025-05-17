@@ -1,45 +1,77 @@
 body {
-    background-color: #0a0a23;
-  }
-  
-  #text {
-    background-color: #0a0a23;
-    color: #ffffff;
-    padding: 10px;
-  }
-  
-  #game {
-    max-width: 500px;
-    max-height: 400px;
-    background-color: #ffffff;
-    color: #ffffff;
-    margin: 30px auto 0px;
-    padding: 10px;
-  }
-  
-  #controls,
-  #stats {
-    border: 1px solid #0a0a23;
-    padding: 5px;
-    color: #0a0a23;
-  }
-  
-  #monsterStats {
-    display: none;
-    border: 1px solid #0a0a23;
-    padding: 5px;
-    color: #ffffff;
-    background-color: #c70d0d;
-  }
-  
-  .stat {
-    padding-right: 10px;
-  }
-  
-  button {
-    cursor: pointer;
-    color: #0a0a23;
-    background-color: #feac32;
-    background-image: linear-gradient(#fecc4c, #ffac33);
-    border: 3px solid #feac32;
-  }
+  margin: 0;
+  padding: 0;
+  background-image: url('../images/village-bg.jpg'); /* Replace with your own */
+  background-size: cover;
+  background-position: center;
+  font-family: 'Verdana', sans-serif;
+  backdrop-filter: blur(3.5px);
+}
+
+#game {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+#controls {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 40px;
+}
+
+#controls button {
+  width: 160px;
+  height: 70px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-image: url('images/wood-texture.jpg'); /* Replace with your own */
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #3e2600;
+  border: 4px solid #b77f2a;
+  border-radius: 12px;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.6);
+  margin: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#controls button:hover {
+  transform: scale(1.05);
+}
+
+#text {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background-color: rgba(255, 248, 220, 0.85); /* parchment look */
+  border: 2px solid #5c3b1e;
+  border-radius: 12px;
+  padding: 15px;
+  max-width: 600px;
+  margin: 20px auto;
+  font-family: 'Georgia', serif;
+  font-size: 1.2rem;
+  color: #3b2e1c;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#stats {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  background-color: rgba(255, 248, 220, 0.85); /* parchment look */
+  border: 2px solid #5c3b1e;
+  border-radius: 12px;
+  padding: 15px;
+  max-width: 600px;
+}
